@@ -3,6 +3,7 @@ import logo from '../logo.svg';
 import '../App.css';
 import ComInput from './ComInput'
 import ComList from './ComList'
+import InputWithUserName from './InputWithUserName'
 class ComApp extends Component {
  
   constructor (){
@@ -56,7 +57,7 @@ class ComApp extends Component {
             <ComInput onSubmit={this.handleSubmitComment.bind(this)} />
             <ComList  onDeleteComment={this.handleDeleteComment.bind(this)} comments={this.state.comments}/>
         </div>
-       
+       <InputWithUserName />
       </div>
     );
   }
