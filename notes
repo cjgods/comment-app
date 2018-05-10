@@ -1,0 +1,8 @@
+1. 组件初始化有多个回调事件 
+    componentWillMount, 挂载前
+    componentDidMount 挂载后
+    componentWillUnmount 删除前
+2. ref 属性来帮助我们获取已经挂载的元素的 DOM 节点
+3. 所有嵌套在组件中的 JSX 结构都可以在组件内部通过 props.children
+4. dangerouslySetInnerHTML可以给html文本内容以html形式载入
+5. propTypes控制参数类型
