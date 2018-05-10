@@ -39,6 +39,12 @@ class ComApp extends Component {
     )
     this._saveComments(comments)
   }
+  handleDeleteComment(index){
+    const comments = this.state.comments
+    comments.splice(index, 1)
+    this.setState({ comments })
+    this._saveComments(comments)
+  }
 
   render() {
     return (
@@ -48,7 +54,7 @@ class ComApp extends Component {
         </header>
         <div className="wrapper">
             <ComInput onSubmit={this.handleSubmitComment.bind(this)} />
-            <ComList comments={this.state.comments}/>
+            <ComList  onDeleteComment={this.handleDeleteComment.bind(this)} comments={this.state.comments}/>
         </div>
        
       </div>
